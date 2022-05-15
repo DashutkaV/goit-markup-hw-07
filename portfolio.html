@@ -24,6 +24,8 @@
         href="./css/style.css">
     <link rel="stylesheet"
         href="./css/main.css">
+    <link rel="stylesheet"
+        href="./css/portfolio.css">
 </head>
 <body>
     <header class="header">
@@ -59,8 +61,8 @@
         </div>
     </header>
     <main>
-        <section class="section portfolio">
-            <div class="container portfolio-container">
+        <section class="section">
+            <div class="container">
                 <h1 class="visually-hidden">Портфолио</h1>
                 <ul class="portfolio-filtres list">
                     <li class="portfolio-filtres-item">
@@ -219,60 +221,60 @@
             </div>
         </section>
     </main>
-    <footer class="footer-content">
+    <footer class="footer">
         <div class="container contacts">
-            <div class="address-content">
-                <a href="" class="logo link">Web<span class="logo-light">Studio</span>
+            <div class="column-address">
+                <a href="" class="logo link">Web<span class="logo--light">Studio</span>
                 </a>
                 <address class="address">
-                    <ul class="footer-list list">
-                        <li class="footer-item">
+                    <ul class="address-list list">
+                        <li class="address-list__item">
                             <a href="https://goo.gl/maps/QefCWzyqJZrkM8jZ6" 
-                            class="footer-address link"
+                            class="address-list__address-link link"
                             target="_blank" 
                             rel="noopener noindex nofollow">
                             г. Киев, пр-т Леси Украинки, 26</a>
                         </li>
-                        <li class="footer-item">
+                        <li class="address-list__item">
                             <a href="mailto:info@example.com" 
-                            class="footer-link link">info@example.com</a>
+                            class="address-list__link link">info@example.com</a>
                         </li>
-                        <li class="footer-item">
+                        <li class="address-list__item">
                             <a href="tel:+380991111111" 
-                            class="footer-link link">+38 099 111 11 11</a>
+                            class="address-list__link link">+38 099 111 11 11</a>
                         </li>
                     </ul>
                 </address>
             </div>
-            <div class="contacts-soc">
-                <h2 class="contacts-soc-title">присоединяйтесь</h2>
-                <ul class="contacts-soc-list list">
-                    <li class="contacts-soc-item">
-                        <a href="" class="contacts-soc-link">
+            <div class="column-soc">
+                <h2 class="column-soc__title">присоединяйтесь</h2>
+                <ul class="soc-list list">
+                    <li class="soc-list__item">
+                        <a href="" class="soc-list__link">
                             <svg class="contacts-soc-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-instagram">
                                 </use>
                             </svg>
                         </a>
                     </li>
-                    <li class="contacts-soc-item">
-                        <a href="" class="contacts-soc-link">
+                    <li class="soc-list__item">
+                        <a href="" class="soc-list__link">
                             <svg class="contacts-soc-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-twitter">
                                 </use>
                             </svg>
                         </a>
                     </li>
-                    <li class="contacts-soc-item">
-                        <a href="" class="contacts-soc-link">
+                    <li class="soc-list__item">
+                        <a href="" class="soc-list__link">
                             <svg class="contacts-soc-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-facebook">
                                 </use>
                             </svg>
                         </a>
                     </li>
-                    <li class="contacts-soc-item">
-                        <a href="" class="contacts-soc-link">
+                    <li class="soc-list__item">
+                        <a href="" class="soc-list__link">
                             <svg class="contacts-soc-icon" width="20" height="20">
                                 <use href="./images/symbol-defs.svg#icon-linkedin">
                                 </use>
@@ -282,21 +284,21 @@
                 </ul>
             </div>
             <div class="online">
-                <h2 class="contacts-soc-title">подпишитесь на рассылку</h2>
+                <h2 class="column-soc__title">подпишитесь на рассылку</h2>
                 <form class="online-form">
-                    <div class="online-inputs">
-                        <div class="online-field">
+                    <div class="inputs">
+                        <div class="inputs-field">
                             <input 
                                 type="email" 
-                                class="online-input" 
+                                class="inputs-field__input" 
                                 name="online-email"
                                 id="email"
                                 placeholder="E-mail"/>
-                            <label for="email" class="online-label"></label>
+                            <label for="email" class="inputs-field__label"></label>
                         </div>                        
-                        <span class="input-buton">
-                            <button type="submit" class="input-btn btn">Подписаться
-                                <svg class="input-icon-btn" width="24" height="24">
+                        <span class="inputs-buton">
+                            <button type="submit" class="inputs-buton__btn btn">Подписаться
+                                <svg class="inputs-buton__icon-btn" width="24" height="24">
                                     <use href="./images/symbol-defs.svg#icon-send"></use>
                                 </svg>
                             </button>

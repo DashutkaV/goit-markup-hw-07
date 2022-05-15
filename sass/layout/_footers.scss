@@ -1,122 +1,109 @@
-.footer-content {
+.footer {
     background: var(--bcg-color);
     padding-top: 60px;
     padding-bottom: 60px;
+    .contacts {
+        display: flex;
+        align-items: baseline;
+    }
 }
 
-.footer-content .contacts {
-    display: flex;
-    align-items: baseline;
-}
-
-.address-content {
+.column-address {
     text-align: cover;
     flex-grow: 1;
 }
 
 .address {
     font-family: 'Roboto';
-    font-weight: 400;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font (null, 14px, 1.71, 0.03em);
+    // font-size: 14px;
+    // line-height: 1.71;
+    // letter-spacing: 0.03em;
+    font-style: normal;    
     margin-top: 20px;
 }
 
-.footer-list {
-    text-align: 120px;
+.address-list {
+    text-align: 120px;    
+    &__item:not(:first-child) {
+        margin-top: 9px;
+    }
 }
 
-.footer-address {
+.address-list__address-link {
     color: var(--main-title-color);
     transition: color var(--cubic);
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.footer-link {
+.address-list__link {
     font-family: 'Roboto';
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font (null, 14px, 1.71, 0.03em);
+    // font-size: 14px;
+    // line-height: 1.71;
+    // letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     transition: color var(--cubic);
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.footer-link:hover, 
-.footer-link:focus {
-    color: var(--accent-color);
-}
 
-.footer-address:hover, 
-.footer-address:focus {
-    color: var(--accent-color);
-}
 
-.footer-item:not(:first-child) {
-    margin-top: 9px;
-}
-
-.contacts-soc {
+.column-soc {
     margin-left: 55px;
     margin-right: 93px;
-
+    &__title {
+        @include font (null, 14px, 1.14, 0.03em);
+        // font-weight: 700;
+        // font-size: 14px;
+        // line-height: 1.14;
+        // letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--main-title-color);
+        margin-bottom: 20px;
+    }
 }
 
-.contacts-soc-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--main-title-color);
-    margin-bottom: 20px;
-}
-
-.contacts-soc-list {
+.soc-list {
     display: flex;
+    &__item + &__item {
+        margin-left: 10px;
+    }
+    &__item:last-child {
+        margin-right: 0px;
+    }    
 }
 
-.contacts-soc-item + .contacts-soc-item {
-    margin-left: 10px;
-}
-
-.contacts-soc-item:last-child {
-    margin-right: 0px;
-}
-
-.contacts-soc-link {
+.soc-list__link {
     padding: 0;
     width: 44px;
     height: 44px;
     background-color:  rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    display: flex;
+    @extend %align-list;
     justify-content: center;
-    align-items: center;
     fill: var(--main-title-color);
     transform: fill var(--cubic), background-color var(--cubic);
+    &:hover, &:focus {
+        background-color: var(--accent-color);
+        fill: var(--main-title-color);
+    }
 }
 
-.contacts-soc-link:hover {
-    background-color: var(--accent-color);
-    fill: var(--main-title-color);
-}
-
-.contacts-soc-link:focus {
-    background-color: var(--accent-color);
-    fill: var(--main-title-color);
-}
-
-.online-inputs {
+.inputs {
     display: flex;
     justify-content: space-between;
 }
 
-.online-field {
+.inputs-field {
     margin-right: 12px;
 }
 
-.online-input {
+.inputs-field__input {
     width: 358px;
     height: 50px;
     box-sizing: border-box;
@@ -127,26 +114,24 @@
     color: var(--main-title-color);
     background-color: transparent;
     font-family: 'Roboto';
-    font-weight: 400;
     font-size: 16px;
     outline: none;
     transition: border-color  var(--main-title-color) border-color var(--cubic);
 }
 
-.online-input:focus {
+.inputs-field__input:focus {
     border-color: var(--main-title-colorr);
 }
 
-.online-label {
+.inputs-field__label {
     font-family: 'Roboto';
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
     color: var(--main-title-color);
     transform: border-color var(--cubic);
 }
 
-.input-btn {
+.inputs-buton__btn {
     display: inline-flex;
     align-items: center;
     min-width: 200px;
@@ -156,7 +141,7 @@
     transform: color var(--cubic);
 }
 
-.input-icon-btn {
+.inputs-buton__icon-btn {
     margin-left: 10px;
     margin-right: 0px;
     margin-top: 6px;

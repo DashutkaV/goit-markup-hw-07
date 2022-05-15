@@ -2,42 +2,49 @@
     padding-bottom: 24px;
     padding-top: 25px;
     border: 1px solid #ECECEC;
-}
-
-.navigation .connect {
-    display: 0;
-    color: var(--accent-color);
-}
-
-.header__logo {
-    margin-right: 93px;
-}
-
-.header .container {
-    display: flex;
-    align-items: center;
+    & .container {
+        @extend %align-list;
+    }
+    &__connect {
+        display: flex;
+        margin-left: auto;
+    }
+    &__logo {
+        margin-right: 93px;
+    }
 }
 
 .menu-list {
     display: flex;
+    &__item:not(:last-child) {
+    margin-right: 50px;
+    }
+    &__link:hover, 
+    &__link:focus {
+    color: var(--accent-color);
+}
 }
 
 .menu-list__link {
     position: relative;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include font (500, 14px, 1.14, 0.02em);
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
     color: var(--header-color);
     transition: color var(--cubic);
 }
 
-.menu-list__list .active {
-    display: block;
+.active {
     color: var(--accent-color);
-}
+    .menu-list & {
+        display: block;
+        color: var(--accent-color);
+    }
+} 
 
-.menu-list__list .active:after {
+.menu-list .active:after {
     content: "";
     position: absolute;
     bottom: -34px;
@@ -48,18 +55,9 @@
     border-radius: 2px;
 }
 
-.menu-list__item:not(:last-child) {
-    margin-right: 50px;
-}
-
-.menu-list__link:hover, 
-.menu-list__link:focus {
+.navigation .connect {
+    display: 0;
     color: var(--accent-color);
-}
-
-.header__connect {
-    display: flex;
-    margin-left: auto;
 }
 
 .connect__item:not(:last-child) {
@@ -67,19 +65,17 @@
 }
 
 .connect__link {
-    align-items: center;
-    display: flex;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @extend %align-list;
+    @include font (500, 14px, 1.14, 0.02em);
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
     color: var(--header-link-color);
     transition: color var(--cubic);
-}
-
-.connect__link:hover,
-.connect__link:focus {
+    &:hover, &:focus {
     color: var(--accent-color);
+    }
 }
 
 .connect__icon {
@@ -87,13 +83,12 @@
     margin-left: 0;
     margin-right: 10px;
     fill: currentColor;
+    .connect &:hover {
+        color: var(--accent-color);
+        fill: currentColor;
+    }
 }
 
-.connect .connect__icon:hover {
-    color: var(--accent-color);
-    fill: currentColor;
-}
 
-.active {
-    color: var(--accent-color);
-} 
+
+

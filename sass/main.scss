@@ -1,7 +1,11 @@
 @import './utils/vars';
-@import './utils/hidden';
 @import './base/reset';
 @import './base/common';
+@import './utils/hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+
 
 @import './components/title';
 @import './components/container';

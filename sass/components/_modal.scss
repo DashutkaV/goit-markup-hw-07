@@ -4,8 +4,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
     transition: opacity 250ms, visibility 250ms;
 }
@@ -140,8 +139,7 @@
 }
 
 .modal-agree {
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
     font-size: 14px;
     line-height: 1.71;
@@ -159,8 +157,7 @@
     border: 2px solid #212121;
     border-radius: 2px;
     margin-right: 5px;
-    display: flex;
-    align-items: center;
+    @extend %align-list;
     justify-content: center;
 }
 
