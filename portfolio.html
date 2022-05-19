@@ -24,20 +24,20 @@
         href="./css/style.css">
     <link rel="stylesheet"
         href="./css/main.css">
-    <link rel="stylesheet"
-        href="./css/portfolio.css">
+    <!-- <link rel="stylesheet"
+        href="./css/portfolio.css"> -->
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <a href="" class="logo header__logo link">Web<span class="logo--dark">Studio</span>
+            <a href="" class="logo header__logo link">Web<span class="logo__dark">Studio</span>
             </a>
             <nav class="navigation">
                 <ul class="menu-list list">
                     <li class="menu-list__item">
                         <a href="./index.html" class="menu-list__link link">Студия</a></li>
                     <li class="menu-list__item">
-                        <a href="./portfolio.html" class="menu-list__link link active">Портфолио</a></li>
+                        <a href="./portfolio.html" class="menu-list__link link menu-list__link--active">Портфолио</a></li>
                     <li class="menu-list__item">
                         <a href="" class="menu-list__link link">Контакты</a></li>
                 </ul>
@@ -224,24 +224,24 @@
     <footer class="footer">
         <div class="container contacts">
             <div class="column-address">
-                <a href="" class="logo link">Web<span class="logo--light">Studio</span>
+                <a href="" class="logo link">Web<span class="logo__light">Studio</span>
                 </a>
-                <address class="address">
-                    <ul class="address-list list">
-                        <li class="address-list__item">
+                <address class="address-contact">
+                    <ul class="address list">
+                        <li class="address__item">
                             <a href="https://goo.gl/maps/QefCWzyqJZrkM8jZ6" 
-                            class="address-list__address-link link"
+                            class="address__address-link link"
                             target="_blank" 
                             rel="noopener noindex nofollow">
                             г. Киев, пр-т Леси Украинки, 26</a>
                         </li>
-                        <li class="address-list__item">
+                        <li class="address__item">
                             <a href="mailto:info@example.com" 
-                            class="address-list__link link">info@example.com</a>
+                            class="address__link link">info@example.com</a>
                         </li>
-                        <li class="address-list__item">
+                        <li class="address__item">
                             <a href="tel:+380991111111" 
-                            class="address-list__link link">+38 099 111 11 11</a>
+                            class="address__link link">+38 099 111 11 11</a>
                         </li>
                     </ul>
                 </address>
@@ -287,18 +287,18 @@
                 <h2 class="column-soc__title">подпишитесь на рассылку</h2>
                 <form class="online-form">
                     <div class="inputs">
-                        <div class="inputs-field">
+                        <div class="field">
                             <input 
                                 type="email" 
-                                class="inputs-field__input" 
+                                class="field__input" 
                                 name="online-email"
                                 id="email"
                                 placeholder="E-mail"/>
-                            <label for="email" class="inputs-field__label"></label>
+                            <label for="email" class="field__label"></label>
                         </div>                        
-                        <span class="inputs-buton">
-                            <button type="submit" class="inputs-buton__btn btn">Подписаться
-                                <svg class="inputs-buton__icon-btn" width="24" height="24">
+                        <span class="submit">
+                            <button type="submit" class="submit__btn btn">Подписаться
+                                <svg class="submit__icon-btn" width="24" height="24">
                                     <use href="./images/symbol-defs.svg#icon-send"></use>
                                 </svg>
                             </button>
